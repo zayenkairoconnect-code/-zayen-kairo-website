@@ -1,38 +1,116 @@
-# Zayen Kairo Author Website
+# Zayen Kairo | Official Author Website
 
-A responsive static author website built with HTML, CSS and vanilla JavaScript.
+Welcome to the official website of **Zayen Kairo**, an author dedicated to making technology easier to understand through practical, beginner-friendly books and learning resources.
 
-## Pages
-- Home
-- Books
-- About
-- Free Resources
-- Notes / Blog
-- Contact
+This website is built using HTML, CSS, and vanilla JavaScript. It provides readers with a central place to explore books, discover learning resources, read articles, and connect with the author.
 
-## Before publishing: important customisation checklist
+## Website Pages
 
-1. **Verify book titles.** Edit `js/books-data.js` and replace any working titles with the exact titles currently published on Amazon.
-2. **Add real book covers.** Replace the SVG placeholders in `images/books/` with your final cover images. Update the `cover` paths in `js/books-data.js` if filenames change.
-3. **Add Amazon links.** Replace every `amazonUrl:"#"` value in `js/books-data.js` with the correct Amazon product URL. Do not publish placeholder `#` links.
-4. **Personalise the About page.** Replace starter biography text in `about.html` with your approved author biography.
-5. **Add a contact email.** Replace `YOUR-EMAIL@example.com` in `contact.html`.
-6. **Connect MailerLite.** Create a signup form in MailerLite and paste its official embed code into the `newsletter-form` area in `index.html` or into the relevant page. Remove the disabled placeholder form generated in `js/main.js` once the real embed is installed.
-7. **Add real lead magnets.** Upload approved PDF files to the website or a reliable file host, then connect each resource to its correct download or MailerLite delivery automation.
-8. **Add legal pages.** Before collecting personal data, publish a Privacy Policy and any required consent/unsubscribe information. Configure MailerLite to handle subscription confirmation and unsubscribe requests.
-9. **Test all links and forms** on desktop and mobile before announcing the website.
+- **Home:** Introduction to the author and featured books.
+- **Books:** Explore published and upcoming books.
+- **About:** Learn about the author and writing philosophy.
+- **Free Resources:** Access supplementary learning materials.
+- **Notes / Blog:** Explore articles, insights, and technology-related topics.
+- **Contact:** Get in touch with the author.
 
-## Preview locally
-Open `index.html` in a browser. For a better local preview, use Visual Studio Code with the Live Server extension.
+## Technologies Used
 
-## Deploy to Cloudflare Pages
-1. Push this repository to GitHub.
-2. In Cloudflare, open **Workers & Pages** and choose **Create application** > **Pages** > **Connect to Git**.
-3. Select this GitHub repository.
-4. For a plain static HTML site, leave the build command empty and set the output directory to `/` (the repository root), if the dashboard requests it.
-5. Deploy. Cloudflare will provide a `*.pages.dev` preview address.
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Fonts
+- GitHub
+- Cloudflare Pages
 
-## Notes
-- This is a static website. No passwords, API keys or private credentials should ever be committed to this public repository.
-- The newsletter form is intentionally inactive until the real MailerLite form is connected.
-- Book covers are visual placeholders, not final Amazon cover artwork.
+## Project Structure
+
+```text
+zayen-kairo-website/
+│
+├── index.html
+├── about.html
+├── books.html
+├── blog.html
+├── contact.html
+├── resources.html
+├── README.md
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── main.js
+│   └── books-data.js
+│
+└── images/
+    ├── author/
+    ├── books/
+    └── favicon.svg
+```
+
+## Before Publishing: Customisation Checklist
+
+Complete the following tasks before officially launching the website.
+
+1. **Verify Book Titles:** Edit `js/books-data.js` and ensure all book titles and descriptions match the actual books published on Amazon.
+
+2. **Add Final Book Covers:** Replace the SVG placeholder covers in `images/books/` with your final book cover images. Update the corresponding image paths in `js/books-data.js`.
+
+3. **Add Amazon Links:** Replace all placeholder `amazonUrl: "#"` values in `js/books-data.js` with the correct Amazon product URLs.
+
+4. **Personalise the About Page:** Update the starter biography in `about.html` with your final author biography.
+
+5. **Add Contact Information:** Replace `YOUR-EMAIL@example.com` in `contact.html` with your official contact email address.
+
+6. **Connect MailerLite:** Create a signup form in MailerLite and integrate its official embed code into the appropriate website section. Remove the inactive placeholder newsletter form from `js/main.js` once the real form is installed.
+
+7. **Add Free Resources:** Upload your final PDF lead magnets and connect each resource to its correct download link or MailerLite email-delivery automation.
+
+8. **Add Legal Pages:** Publish a Privacy Policy and provide appropriate subscription consent and unsubscribe information before collecting visitor information.
+
+9. **Test the Website:** Check all navigation links, book links, images, newsletter forms, and downloads on desktop, tablet, and mobile devices.
+
+## Preview Locally
+
+You can preview the website on your computer:
+
+1. Open the project folder in Visual Studio Code.
+2. Open `index.html` in your browser.
+
+For a better development experience, install the **Live Server** extension in Visual Studio Code and select **Open with Live Server**.
+
+## Deployment with Cloudflare Pages
+
+This project is a static HTML website and can be hosted using Cloudflare Pages through GitHub integration.
+
+### Deployment Steps
+
+1. Upload the complete website project to your GitHub repository.
+2. Open your Cloudflare dashboard.
+3. Navigate to **Workers & Pages**.
+4. Select **Create application → Pages → Connect to Git**.
+5. Connect your GitHub account.
+6. Select the Zayen Kairo website repository.
+7. Configure the deployment settings:
+   - **Framework preset:** None
+   - **Build command:** Leave empty
+   - **Build output directory:** `.` (project root)
+8. Click **Save and Deploy**.
+
+After successful deployment, Cloudflare will provide a public website address ending in `.pages.dev`.
+
+Cloudflare can automatically deploy future website updates whenever changes are committed to the connected GitHub production branch.
+
+## Important Notes
+
+- This is a static website built with HTML, CSS, and JavaScript. It does not require a backend server.
+- The newsletter form remains inactive until MailerLite is properly integrated.
+- Placeholder book covers and Amazon links must be replaced before the official launch.
+- Never upload passwords, API keys, private credentials, or sensitive information to this public repository.
+
+---
+
+**Author:** Zayen Kairo  
+**Project:** Official Author Website  
+**Built with:** HTML, CSS & JavaScript  
+**Hosting:** Cloudflare Pages
